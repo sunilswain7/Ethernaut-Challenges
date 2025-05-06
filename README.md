@@ -1,7 +1,7 @@
 # Ethernaut-Challenges
 | Task No. | Task Name                                             |
 |----------|-------------------------------------------------------|
-| 00       | [Hello Ethernaut](https://github.com/sunilswain7/Ethernaut-Challenges/tree/main/Hello-Ethernaut)                                   |
+| 00       | [Hello Ethernaut](https://github.com/sunilswain7/Ethernaut-Challenges/blob/main/Hello-Ethernaut/Hello-Ethernaut.md)                                   |
 | 01       | [Fallback](https://github.com/sunilswain7/Ethernaut-Challenges/tree/main/Fallback)                                          |
 | 02       | [Fallout](https://github.com/sunilswain7/Ethernaut-Challenges/tree/main/Fallout)                                           |
 | 03       | [Coin Flip](https://github.com/sunilswain7/Ethernaut-Challenges/tree/main/CoinFlip)                                         |
