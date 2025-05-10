@@ -3,7 +3,8 @@ Buy the item from the Shop contract for less than 100.
 
 <details>
 <summary>See the original contract</summary>
-
+    
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 interface Buyer {
@@ -21,6 +22,7 @@ contract Shop {
         }
     }
 }
+```
 </details>
 
 Expalanation:
