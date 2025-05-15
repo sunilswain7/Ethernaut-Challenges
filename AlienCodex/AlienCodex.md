@@ -4,7 +4,7 @@ Objective:
 
 Claim ownership of the contract.
 
-Vulnerability:
+Vulnerability: Here vulnerability is the dynamic array
 
 Concepts You Need To Know:
 
