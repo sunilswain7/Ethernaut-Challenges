@@ -1,20 +1,20 @@
-Level 3: CoinFlip
+# Level 3: CoinFlip
 
-Objective:
+# Objective:
 
 You must consecutively win the coin flip 10 times in a row.
 
-Vulnerability:
+# Vulnerability:
 
 It uses blockhash of the previous block and divides it to a huge constant to decide the coutcome.
 Since blockhash and factor are known the outcome can be predicted.
 
-Explanation:
+# Explanation:
 
 We can do the same calculations in another contract. Predict whether the result will be true or false then submit the correct guess to the flip() function.
 We repeat this 10 times in a row to win.
 
-Solution:
+# Solution:
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
@@ -41,6 +41,6 @@ put the contracts address(await contract.adrress) in \_target then call predictA
 you can check using await contract.consecutiveWins()
 if it returns 10 submit the level.
 
-Key Takeaways:
+# Key Takeaways:
 
 Never use blockhash for randomness as attackers might predict or manipulate it.
